@@ -22,3 +22,28 @@ the functionality would be:
   Then "Your history" section is displayed
   Then each reward contains one characteristic thumbnail (visual representation)
   Then only last 8 tokens are displayed on the page
+
+
+BACK-END (JSON object)
+a) By using the method `/igc/betspin/rewards/history` with only 1 param `userName`, 
+   we will get a JSON with an array of unique tokens claimed by that user.
+   Scenario 1: check that using a method we get correct JSON
+   Given method is used correctly
+   And only 1 parameter `userName` is used
+   Then we get a JSON with an array of unique tokens claimed by that user
+   
+b) Each unique token claimed could have been claimed more than once (sub-array objects)
+   Scenario 2: check that unique token can be claimed more than once
+   Given token has been claimed
+   Then we can use same unique token more than once again
+
+c) The following info will be contained for each sub-array object: game-slug,date 
+   claimed, info, reason, expiry date.
+   Scenario 3: check that correct info is present for each object
+   Given object has info fields
+   Then those fields are "game-slug,date claimed, info, reason, expiry date."
+   
+d) The response will be in chronological order in the array and sub-array.
+   Scenario 4: check that order in response is correct
+   Given response is received
+   Then the response will be in chronological order
