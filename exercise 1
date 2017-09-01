@@ -5,20 +5,20 @@ the functionality would be:
   - When user claims a reward (token) the "Your history" section will be displayed
   Scenario 1: check that when user claims a reward (token) the "Your history" section is displayed
   Given user is logged in
-  When clicks on a button "Activate" (to claim a reward)
+  When clicks on a button "Activate" to claim a reward
   Then "Your history" section is displayed
   
   - Each token will display 1 characteristic thumbnail 
    Scenario 2: check that when user claims a reward (token) the "Your history" section is displayed
   Given user is logged in
-  When clicks on a button "Activate" (to claim a reward)
+  When clicks on a button "Activate" to claim a reward
   Then "Your history" section is displayed
   Then each reward contains one characteristic thumbnail (visual representation)
   
   - Only the last 8 tokens will be displayed
    Scenario 3: check that when user claims a reward (token) the "Your history" section is displayed
   Given user is logged in
-  When clicks on a button "Activate" (to claim a reward)
+  When clicks on a button "Activate" to claim a reward
   Then "Your history" section is displayed
   Then each reward contains one characteristic thumbnail (visual representation)
   Then only last 8 tokens are displayed on the page
