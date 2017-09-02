@@ -5,22 +5,22 @@ the functionality would be:
   - When user claims a reward (token) the "Your history" section will be displayed
   Scenario 1: check that when user claims a reward (token) the "Your history" section is displayed
   Given user is logged in
-  When clicks on a button "Activate" to claim a reward
+  And clicks "Activate" button in the Freebies Vault Section
   Then "Your history" section is displayed
   
   - Each token will display 1 characteristic thumbnail 
-   Scenario 2: check that when user claims a reward (token) the "Your history" section is displayed
+  Scenario 2: check that when user history is open then each token displays 1 characteristic thumbnail
   Given user is logged in
-  When clicks on a button "Activate" to claim a reward
-  Then "Your history" section is displayed
+  And clicks "Activate" button in the Freebies Vault Section
+  And "Your history" section is displayed
   Then each reward contains one characteristic thumbnail (visual representation)
   
   - Only the last 8 tokens will be displayed
-   Scenario 3: check that when user claims a reward (token) the "Your history" section is displayed
+  Scenario 3: check that only last 8 tokens are displayed on "Your history" page
   Given user is logged in
-  When clicks on a button "Activate" to claim a reward
-  Then "Your history" section is displayed
-  Then each reward contains one characteristic thumbnail (visual representation)
+  And clicks "Activate" button in the Freebies Vault Section
+  And "Your history" section is displayed
+  And each reward contains one characteristic thumbnail (visual representation)
   Then only last 8 tokens are displayed on the page
 
 
@@ -41,7 +41,7 @@ c) The following info will be contained for each sub-array object: game-slug,dat
    claimed, info, reason, expiry date.
    Scenario 3: check that correct info is present for each object
    Given object has info fields
-   Then those fields are "game-slug,date claimed, info, reason, expiry date."
+   Then those fields are "game-slug, date claimed, info, reason, expiry date."
    
 d) The response will be in chronological order in the array and sub-array.
    Scenario 4: check that order in response is correct
